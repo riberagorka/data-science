@@ -30,8 +30,15 @@ export const Blog = <Icon icon="ph:link-bold" />;
  **************************************************************
   Add a second paragraph for the about me section.
 */
-export const moreInfo =
-  "I enjoy learning about technology and helping others use it to improve their lives and be more productive. I built this site with React, React Bootstrap, Redux, and the GitHub REST API.";
+export const moreInfo = `
+    Hello, I'm Gorka! I'm not one to neatly fit into predefined profiles – I'm all about the experiences that shape who I am. Armed with degrees in Sports Science and Data Science, I thrive on transforming ideas into tangible projects.
+
+    Currently, I'm channeling my skills at the Computing Center of the University of Cologne. Beyond my solid foundation in data and mathematics, my forte lies in lateral thinking. Having navigated diverse environments and tackled various projects, I've refined my knack for approaching challenges from unique angles.
+
+    Outside of my workspace, I'm passionately exploring my own ideas that fuse software and communication. I'm deeply immersed in the realms of data and mathematics, crafting solutions that truly make a difference. When I'm not on the clock, catch me cycling through scenic routes, conquering mountains, diving into captivating books, or engaging in lively conversations with like-minded individuals.
+
+    Whether you share a passion for data or just want to connect and chat, let's collaborate to make both work and life a bit more awesome!
+	`;
 
 /* Skills
  ************************************************************** 
@@ -65,8 +72,8 @@ export const skillData = [
   },
   {
     id: 6,
-    skill: <Icon icon="logos:git" className="display-4" />,
-    name: "Git",
+    skill: <Icon icon="logos:aws-s3" className="display-4" />,
+    name: "Object Storage",
   },
   {
     id: 7,
@@ -75,8 +82,8 @@ export const skillData = [
   },
   {
     id: 8,
-    skill: <Icon icon="logos:aws-s3" className="display-4" />,
-    name: "Object Storage",
+    skill: <Icon icon="logos:git" className="display-4" />,
+    name: "Git",
   },
   {
     id: 9,
