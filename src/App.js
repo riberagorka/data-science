@@ -22,6 +22,7 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import AllProjects from "./pages/AllProjects";
 import Blogs from "./pages/AllArticles";
+import Article from "./pages/Article"; // Import the new Article component
 import NotFound from "./pages/NotFound";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -92,6 +93,7 @@ export default function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/All-Projects" element={<AllProjects />} />
             <Route path="/Blog" element={<Blogs />} />
+            <Route path="/Blog/:url_name" element={<Article />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </ThemeProvider>

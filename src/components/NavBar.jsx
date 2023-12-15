@@ -83,7 +83,7 @@ export default function NavBar({ Logo }) {
     routes: [
       { id: "1R", name: "Home", route: "/" },
       { id: "2R", name: "All Projects", route: "/All-Projects" },
-      { id: "3R", name: "Blog route: ", route: "/Blog"}
+      { id: "3R", name: "Blog ", route: "/Blog"}
     ],
     to: [
       { id: "1T", name: "Home", to: "Home" },

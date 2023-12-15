@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { selectData, selectError, selectIsLoading } from "../pages/allProjectsSlice";
-import { Element, Link as ScrollLink } from "react-scroll";
-import { Icon } from "@iconify/react";
-import {Title, Loading } from "./globalStyledComponents";
+import { Element } from "react-scroll";
+import { Title, Loading } from "./globalStyledComponents";
 import { Button, Container } from "react-bootstrap";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
+
+import articlesData from "../docs/articles.json";
 
 export default function Articles() {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -14,18 +15,8 @@ export default function Articles() {
   const data = useSelector(selectData);
 
   useEffect(() => {
-    // Function to dynamically import blog posts from the 'blogs' directory
-    const importBlogPosts = async () => {
-      const blogContext = require.context("../../docs", false, /\.jsx$/);
-      
-      const blogPostModules = blogContext.keys().map(blogContext);
-      console.log("Blog Post Modules:", blogPostModules);
-      const blogPostData = blogPostModules.map((module) => module.default);
-      console.log("Blog Post Data:", blogPostData);
-      setBlogPosts(blogPostData);
-    };
-
-    importBlogPosts();
+    // Use data from articles.json directly
+    setBlogPosts(articlesData.articles);
   }, []);
 
   return (
@@ -47,7 +38,7 @@ export default function Articles() {
       )}
       {blogPosts.length !== 0 && (
         <Container>
-          {blogPosts.map(({ id, idName, title, content }) => (
+          {blogPosts.map(({ id, title, content }) => (
             <Container key={id} style={{ marginVertical: 10 }}>
               <h3>{title}</h3>
               <p>{content}</p>
@@ -55,9 +46,9 @@ export default function Articles() {
           ))}
           {data.length > 3 && (
             <Container className="text-center mt-5">
-               <Link to="/Blog">
+              <Link to="/Blog">
                 <Button size="lg" variant="outline-dark">
-                  Dankeschön <Icon icon="icomoon-free:arrow-up" />
+                  Dankeschön
                 </Button>
               </Link>
             </Container>

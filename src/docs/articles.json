@@ -1,0 +1,18 @@
+{
+    "articles": [
+      {
+        "id": 1,
+        "title": "Introduction to React",
+        "content": "# Introduction\n\nThis is an introduction to React.",
+        "url_name": "introduction-to-react"
+      },
+      {
+        "id": 2,
+        "title": "Getting Started with Redux",
+        "content": "# Getting Started\n\nThis is a guide to using Redux with React.",
+        "url_name": "getting-started-with-redux"
+
+      }
+    ]
+  }
+  
