@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 // import newLogo from "./images/yourFileName"
 
 // Projects Images (add your images to the images directory and import below)
-import Logo from "./images/logo.svg";
+import Logo from "./images/python-logo.png";
 
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
@@ -40,48 +40,48 @@ export const moreInfo =
 export const skillData = [
   {
     id: 1,
-    skill: <Icon icon="mdi:language-html5" className="display-4" />,
-    name: "HTML5",
+    skill: <Icon icon="logos:python" className="display-4" />,
+    name: "Python",
   },
   {
     id: 2,
-    skill: <Icon icon="ion:logo-css3" className="display-4" />,
-    name: "CSS3",
+    skill: <Icon icon="logos:java" className="display-4" />,
+    name: "Java",
   },
   {
     id: 3,
-    skill: <Icon icon="fa6-brands:js" className="display-4" />,
-    name: "JavaScript",
+    skill: <Icon icon="devicon-plain:microsoftsqlserver-wordmark" className="display-4" />,
+    name: "SQL Server",
   },
   {
     id: 4,
-    skill: <Icon icon="ri:bootstrap-fill" className="display-4" />,
-    name: "BootStrap",
+    skill: <Icon icon="logos:tensorflow" className="display-4" />,
+    name: "Tensorflow",
   },
   {
     id: 5,
-    skill: <Icon icon="mdi:react" className="display-4" />,
-    name: "React",
+    skill: <Icon icon="devicon:keras" className="display-4" />,
+    name: "Keras",
   },
   {
     id: 6,
-    skill: <Icon icon="file-icons:styledcomponents" className="display-4" />,
-    name: "Styled Components",
-  },
-  {
-    id: 7,
-    skill: <Icon icon="akar-icons:redux-fill" className="display-4" />,
-    name: "Redux",
-  },
-  {
-    id: 8,
-    skill: <Icon icon="bi:git" className="display-4" />,
+    skill: <Icon icon="logos:git" className="display-4" />,
     name: "Git",
   },
   {
+    id: 7,
+    skill: <Icon icon="devicon:linux" className="display-4" />,
+    name: "Linux",
+  },
+  {
+    id: 8,
+    skill: <Icon icon="logos:aws-s3" className="display-4" />,
+    name: "Object Storage",
+  },
+  {
     id: 9,
-    skill: <Icon icon="fa6-brands:square-github" className="display-4" />,
-    name: "GitHub",
+    skill: <Icon icon="logos:airflow" className="display-4" />,
+    name: "Airflow",
   },
 ];
 
