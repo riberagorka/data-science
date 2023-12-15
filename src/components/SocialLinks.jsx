@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { Blog } from "../data";
 // Icons
 import { Icon } from '@iconify/react';
+import { FaLinkedin } from "react-icons/fa";
 
 const StyledSocialLinks = styled.div`
   a {
@@ -15,6 +16,7 @@ const StyledSocialLinks = styled.div`
 
 export default function SocialLinks() {
   const { blog, html_url } = useSelector(selectData);
+  const linkedin_url = "https://www.linkedin.com/in/gorkaribera/"
 
   return (
     <StyledSocialLinks>
@@ -25,6 +27,12 @@ export default function SocialLinks() {
       >
         <Icon icon="icomoon-free:github" />
       </a>
+      <a
+        href={linkedin_url}
+        aria-label="Check out my Linkedin profile."
+        className="link-icons"
+      >
+        <FaLinkedin />      </a>
       {blog && (
         <a href={blog} aria-label="External link" className="link-icons">
           {Blog}

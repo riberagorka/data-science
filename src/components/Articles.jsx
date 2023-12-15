@@ -7,7 +7,7 @@ import {Title, Loading } from "./globalStyledComponents";
 import { Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
-export default function Blog() {
+export default function Articles() {
   const [blogPosts, setBlogPosts] = useState([]);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -16,11 +16,12 @@ export default function Blog() {
   useEffect(() => {
     // Function to dynamically import blog posts from the 'blogs' directory
     const importBlogPosts = async () => {
-      const blogContext = require.context("../blogs", false, /\.js$/);
+      const blogContext = require.context("../../blogs", false, /\.jsx$/);
+      
       const blogPostModules = blogContext.keys().map(blogContext);
-
+      console.log("Blog Post Modules:", blogPostModules);
       const blogPostData = blogPostModules.map((module) => module.default);
-
+      console.log("Blog Post Data:", blogPostData);
       setBlogPosts(blogPostData);
     };
 
@@ -48,9 +49,7 @@ export default function Blog() {
         <Container>
           {blogPosts.map(({ id, idName, title, content }) => (
             <Container key={id} style={{ marginVertical: 10 }}>
-              <Link to={`/blogs/${idName}`}>
-                <h3>{title}</h3>
-              </Link>
+              <h3>{title}</h3>
               <p>{content}</p>
             </Container>
           ))}
