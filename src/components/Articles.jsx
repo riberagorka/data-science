@@ -16,7 +16,7 @@ export default function Articles() {
   useEffect(() => {
     // Function to dynamically import blog posts from the 'blogs' directory
     const importBlogPosts = async () => {
-      const blogContext = require.context("../../blogs", false, /\.jsx$/);
+      const blogContext = require.context("../../docs", false, /\.jsx$/);
       
       const blogPostModules = blogContext.keys().map(blogContext);
       console.log("Blog Post Modules:", blogPostModules);
