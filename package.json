@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "homepage": "https://riberagorka.github.io/",
+  "name": "Data Science Blog",
+  "homepage": "https://riberagorka.github.io/data-science/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
